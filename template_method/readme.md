@@ -24,3 +24,8 @@ Abstract class will contain only abstract methods without realization.
 
 And concrete report creation object will contain the concrete relization of ech
 template method
+
+i## drawbacks:
+
+- Inheritance (subclasses are tangled up with their super- class)
+- Every time we neeed new format of report we need to create a new class
