@@ -8,6 +8,11 @@ And in future this thing will need to do something else.
 
 - mixeing up code that is changing with code that is not changing
 
+## Solution:
+
+Create a base class with a template method(s)\
+that controls the overall processing and then to use subclasses to fill in the details
+
 ### Example:
 
 Coding a `Report` obect that creating same report in different formats.
