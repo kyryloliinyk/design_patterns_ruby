@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Concrete class HTML Formatter that incapsulates formatting logic
-class HTMLFormatter < Formatter
+class HTMLFormatter
   def output_report(context)
     puts('<!DOCTYPE html>')
     puts('<head>')
