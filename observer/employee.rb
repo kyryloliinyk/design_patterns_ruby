@@ -8,10 +8,10 @@ class Employee
 
   attr_reader :name, :salary
 
-  def initialize(_name, _title, _salary)
-    @name
-    @title
-    @salary
+  def initialize(name, title, salary)
+    @name = name
+    @title = title
+    @salary = salary
     @observers = [] # no need to write if using Ruby's Observerable module
   end
 

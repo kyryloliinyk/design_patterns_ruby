@@ -14,5 +14,5 @@ class NumberingWriter < WriterDecorator
 
   private
 
-  attr_accessor :line_nuber
+  attr_accessor :line_number
 end
