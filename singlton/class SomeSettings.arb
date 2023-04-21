@@ -1,0 +1,27 @@
+class SomeSettings
+    @@instance = SomeSettings.new
+  
+    def self.instance
+      @@instance
+    end
+  
+    attr_reader :host, :port
+  
+    def initialize
+      @host = 'localhost'
+      @port = 3000
+    end
+  
+    private_class_method :new
+  end
+
+require 'singleton'
+
+class SomeSettings
+    include singleton
+    attr_reader :host, :port
+    def initialize
+        @host = 'localhost'
+        @port = 3000
+    end
+end

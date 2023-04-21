@@ -9,6 +9,41 @@
 дожидаясь вызова извне, а использование модуля прдполагает "ленивое создание"
 по необходимости.
 ```ruby
-SimpleLooger.new # Error: private method 'new' called
-SimpleLogeer.instance == SimpleLoggerInstance # true
+require 'singleton'
+
+class SomeSettings
+    include Singleton
+    attr_reader :host, :port
+    def initialize
+        @host = 'localhost'
+        @port = 3000
+    end
+end
+
+#   =========================== Manually
+
+class SomeSettings
+    @@instance = SomeSettings.new
+  
+    def self.instance
+      @@instance
+    end
+
+    
+    def initialize
+        @host = 'localhost'
+        @port = 3000
+    end
+    attr_reader :host, :port
+  
+    private_class_method :new
+  end
 ```
+
+```bash
+    SomeSettings.instance.port # 3000
+        SomeSettings.instance.port # localhost
+        SomeSettings.new #NoMethodError: private method `new' called
+```
+
+
