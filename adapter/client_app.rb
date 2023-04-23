@@ -1,12 +1,12 @@
 class ClientApp
-    def initialize(platform: , user: )
+    def initialize(platform_adapter: , user: )
         @platform = platform
         @user = user
     end
 
     def call
-        platform.new.subscribe(user)
-        platform.new.register(user)
+        platform_adapter.subscribe(user)
+        platform_adapter.register(user)
     end
     private
 
