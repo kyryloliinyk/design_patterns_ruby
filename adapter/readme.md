@@ -8,6 +8,6 @@
 
 
 ```ruby
-ClientApp.new(platform: PayPalPlatformAdapter.new, user: User.new).call
-ClientApp.new(platform: SomeOtherPlatformAdapter.new, user: User.new).call
+ClientApp.new(platform_adapter: PayPalPlatformAdapter.new, user: User.new).call
+ClientApp.new(platform_adapter: SomeOtherPlatformAdapter.new, user: User.new).call
 ```
